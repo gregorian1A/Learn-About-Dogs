@@ -11,7 +11,7 @@ const App = () => {
 }
 
 const Dogs = () => {
-  const [state, setState] = useState([]);
+  const [data, setData] = useState([]);
   const [query, setQuery] = useState("bull");
   const SearchValue = useRef("");
 
@@ -26,11 +26,11 @@ const Dogs = () => {
       }
     }, [query])
       .then((response) => {
-        setState(response.data)
+        setData(response.data)
         
       })
       .catch((error) => {
-        console.log(error)
+        console.error(error)
       })
   })
   return (
@@ -38,7 +38,7 @@ const Dogs = () => {
       <h1>Learn About Dogs</h1>
       <input type="text" ref={SearchValue} onChange={() => setQuery(SearchValue.current.value)} placeholder="Enter dog breed name" />
       <div className="cards">
-        {state.map(dog => <DogBreed key={dog.id} dog={dog} />)}
+        {data.map(dog => <DogBreed key={dog.id} dog={dog} />)}
       </div>
     </div>
   );
