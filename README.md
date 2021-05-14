@@ -1,3 +1,3 @@
-# react-lcq1sa
+# Learn About Dogs
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-lcq1sa)
+Search for any dog breed in the world and get information you probably did not know about.
