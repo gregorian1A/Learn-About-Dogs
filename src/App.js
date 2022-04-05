@@ -12,7 +12,7 @@ const App = () => {
 
 const Dogs = () => {
   const [data, setData] = useState([]);
-  const [query, setQuery] = useState('bull');
+  const [query, setQuery] = useState('v');
   const SearchValue = useRef('');
 
   useEffect(() => {
